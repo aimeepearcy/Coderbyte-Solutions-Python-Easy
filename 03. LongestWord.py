@@ -2,15 +2,12 @@
 # If there are two or more words that are the same length, return the first word from the string with that length. 
 # Ignore punctuation and assume sen will not be empty. 
 
-import string
-
 def LongestWord(sen):
-    ascii = string.ascii_letters
     newStr = ""
 
     # Remove all non-ascii characters from the string
     for letter in sen:
-        if letter in ascii or letter == " ":
+        if letter.isalnum() or letter == " ":
             newStr += letter
         
     # Split the sentence into individual words and add them to a list
