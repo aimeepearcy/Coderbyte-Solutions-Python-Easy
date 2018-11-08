@@ -9,4 +9,4 @@ def SimpleAdding(num):
     return num + SimpleAdding(num - 1)
     
 # keep this function call here  
-print SimpleAdding(raw_input())
+print(SimpleAdding(raw_input()))
