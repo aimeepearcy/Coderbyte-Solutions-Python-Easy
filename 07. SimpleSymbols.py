@@ -6,19 +6,22 @@
 
 def SimpleSymbols(str): 
  
-    # If the first or last letter in the string is an alphabetic character, it can't be surrounded by '+' characters, so return false.
+    # If the first or last letter in the string is an alphabetic character.
+    # It can't be surrounded by '+' characters, so return false.
     if str[0].isalpha() or str[len(str)-1].isalpha():
         return "false"
-
-    # Iterate through the string and check if each letter is in the alphabet. If it is, check that the surrounding characters are "+"s.
-    for i in range(1, len(str)-1):
+        
+    # Iterate through the string and check if each letter is in the alphabet. 
+    # If it is, check that the surrounding characters are "+"s.
+    for i in range(1, len(str)):
         if str[i].isalpha():
             if str[i-1] != "+":
                 return "false"
             if str[i+1] != "+":
                 return "false"
-        else:
-            return "true"
+                
+    # If none of these are the case, the string must be acceptable by default.
+    return "true"
     
 # keep this function call here  
 print SimpleSymbols(raw_input())
