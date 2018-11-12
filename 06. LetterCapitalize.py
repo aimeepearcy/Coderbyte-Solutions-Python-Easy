@@ -7,8 +7,8 @@ def LetterCapitalize(str):
     new_str = ""
     
     # Split the string so each word is separate
-    str = str.split()
-    for word in str:
+    split_str = str.split()
+    for word in split_str:
             # The .capitalize() function capitalizes the first word in each string
             new_word = word.capitalize()
             # Add the updated word to the new_str placeholder, along with a space to separate them
